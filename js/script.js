@@ -54,7 +54,7 @@ const getRandomQuote = () => {
   let randomNumber = Math.floor( Math.random() * 10 );
   let quote = quotes[randomNumber];
   return quote;
-}
+};
 
 /***
  * `printQuote` function
@@ -77,14 +77,13 @@ const printQuote = () => {
 
   document.getElementById('quote-box').innerHTML = html; 
   document.getElementsByTagName('body')[0].style.backgroundColor = `${randomColour()}`; 
-
-}
+};
 
 // this function uses the math.random method to return a random rbg colour. 
 const randomColour = () => {
   let colour = `rgb(${Math.ceil(Math.random() * 150)}, ${Math.ceil(Math.random() * 150)}, ${Math.ceil(Math.random() * 150)})`;
   return colour;
-}
+};
 
 // this function runs the printQuote function every 20 seconds. 
 setInterval( () => { 
