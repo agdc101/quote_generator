@@ -50,9 +50,15 @@ const quotes = [
 /***
  * `getRandomQuote` function
 ***/
+let prevNumber;
+let number;
 const getRandomQuote = () => {
-  let randomNumber = Math.floor( Math.random() * 10 );
-  let quote = quotes[randomNumber];
+  // do while loop prevents the same quote being generated.
+  do {
+    number = Math.floor( Math.random() * 10 );
+  } while (number === prevNumber)
+  prevNumber = number;
+  let quote = quotes[number];
   return quote;
 };
 
